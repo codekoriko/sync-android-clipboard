@@ -1,0 +1,46 @@
+[tool.poetry]
+name = "share-android-clipboard"
+description = "make use of sh package and termux-api termux-clipboard-get and gist-storage to share clipboard between devices"
+version = "0.1.0"
+license = "MIT"
+
+authors = []
+
+readme = "README.md"
+
+repository = "https://github.com/psychonaute/share-android-clipboard"
+
+keywords = []
+
+classifiers = [
+  "Development Status :: 3 - Alpha",
+  "Intended Audience :: Developers",
+  "Operating System :: OS Independent",
+  "Topic :: Software Development :: Libraries :: Python Modules",
+]
+
+[tool.poetry.dependencies]
+python = "^3.11"
+sh = "^2.0.6"
+python-dotenv = "^1.0.1"
+gist-storage = {git = "https://git@github.com/psychonaute/gist-storage.git", extras = ["encryption"]}
+
+[tool.poetry.group.test.dependencies]
+nitpick = "^0.32"
+
+safety = "^2.3"
+
+pytest = "^7.1"
+pytest-cov = "^4.0"
+pytest-randomly = "^3.12"
+
+[build-system]
+requires = ["poetry-core>=1.1.13"]
+build-backend = "poetry.core.masonry.api"
+
+# add third party modules twhom stud file can't be found
+# cf: Python - typing.xmind
+[[tool.mypy.overrides]]
+module = [
+]
+ignore_missing_imports = true
