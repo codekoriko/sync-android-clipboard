@@ -5,7 +5,7 @@
 [![Python Version](https://img.shields.io/pypi/pyversions/local-ip-bookkeeper.svg)](https://pypi.org/project/local-ip-bookkeeper/)
 [![wemake-python-styleguide](https://img.shields.io/badge/style-wemake-000000.svg)](https://github.com/wemake-services/wemake-python-styleguide)
 
-Shares the current clipboard content by pushing it to the Gist. It make use of the [gist-storage](https://github.com/psychonaute/gist-storage) package
+Shares the current clipboard content by encrypting it and pushing it to a Gist file. It make use of the [gist-storage](https://github.com/psychonaute/gist-storage) package
 
 ## Features
 
