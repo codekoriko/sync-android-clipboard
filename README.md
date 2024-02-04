@@ -24,11 +24,15 @@ poetry add git+https://git@github.com:psychonaute/share-android-clipboard.git
 `your-gist-hash` and `your-file.json` from the gist you manually created, which can be secret (private). Also CF: [gist-storage doc](https://github.com/psychonaute/gist-storage)
 
 ```python
+from dotenv import load_dotenv, find_dotenv
 from local_ip_bookkeeper.tracker import IPTracker
+
+
+load_dotenv(find_dotenv())
 
 share_clip_ = ShareClipboard(
     'your-gist-hash',
-    'your-file.json',
+    'my-phone-clipboard-encrypted-file',
 )
 share_clip_.share()
 ```
