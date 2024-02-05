@@ -14,7 +14,7 @@ Shares the current clipboard content by encrypting it and pushing it to a Gist f
 ## Installation
 
 ```bash
-poetry add git+https://git@github.com:psychonaute/share-android-clipboard.git
+poetry add git+https://github.com/codeCoRepo/share-android-clipboard#master
 ```
 
 ## Usage
