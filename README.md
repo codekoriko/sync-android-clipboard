@@ -25,7 +25,7 @@ poetry add git+https://git@github.com:psychonaute/share-android-clipboard.git
 
 ```python
 from dotenv import load_dotenv, find_dotenv
-from local_ip_bookkeeper.tracker import IPTracker
+from share_android_clipboard.share import ShareClipboard
 
 
 load_dotenv(find_dotenv())
