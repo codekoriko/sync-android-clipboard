@@ -5,7 +5,7 @@
 [![Python Version](https://img.shields.io/pypi/pyversions/local-ip-bookkeeper.svg)](https://pypi.org/project/local-ip-bookkeeper/)
 [![wemake-python-styleguide](https://img.shields.io/badge/style-wemake-000000.svg)](https://github.com/wemake-services/wemake-python-styleguide)
 
-Shares the current clipboard content by encrypting it and pushing it to a Gist file. It make use of the [gist-storage](https://github.com/psychonaute/gist-storage) package
+Sync the clipboard content between device. It uses encryption a Gist files thanks to the [gist-storage](https://github.com/psychonaute/gist-storage) package
 
 ## Features
 
@@ -14,27 +14,28 @@ Shares the current clipboard content by encrypting it and pushing it to a Gist f
 ## Installation
 
 ```bash
-poetry add git+https://github.com/codeCoRepo/share-android-clipboard#master
+poetry add git+https://github.com/codeCoRepo/sync-android-clipboard#master
 ```
 
 ## Usage
 
 `GITHUB_GIST_TOKEN` environement variable needs to be defined with your githun token CF: [gist-storage doc](https://github.com/psychonaute/gist-storage)
 
-`your-gist-hash` and `your-file.json` from the gist you manually created, which can be secret (private). Also CF: [gist-storage doc](https://github.com/psychonaute/gist-storage)
+create a gist and copy `your-gist-hash`. Inside that gist create 2 files `my-local-clipboard` and `my-remote-clipboard`. Gist can be set to `secret` (private). Also CF: [gist-storage doc](https://github.com/psychonaute/gist-storage)
 
 ```python
 from dotenv import load_dotenv, find_dotenv
-from share_android_clipboard.share import ShareClipboard
+from sync_android_clipboard.sync import SyncClipboard
 
 
 load_dotenv(find_dotenv())
 
-share_clip_ = ShareClipboard(
+sync_clip= SyncClipboard(
     'your-gist-hash',
     'my-phone-clipboard-encrypted-file',
 )
-share_clip_.share()
+sync_clip.push()
+sync_clip.fetch()
 ```
 
 ## License
