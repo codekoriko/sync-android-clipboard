@@ -80,13 +80,15 @@ class SyncClipboard(object):
             If the clipboard content is empty, no action is taken.
         """
         clipboard_content = termux_clipboard_get() or ''
+        if len(clipboard_content) > MAX_CONTENT_LOG:
+            jest = f'{clipboard_content[:MAX_CONTENT_LOG]}...'
+        else:
+            jest = clipboard_content
+        logging.info(f'retrieved android clipboard content: {jest}')
         if clipboard_content:
             self.device_gist_manager.push_content(clipboard_content)
-            if len(clipboard_content) > MAX_CONTENT_LOG:
-                jest = f'{clipboard_content[:MAX_CONTENT_LOG]}...'
-            else:
-                jest = clipboard_content
-            logging.info(f'Updated clipboard content: {jest}')
+            logging.info('content pushed to Gist.')
+
 
     def fetch(self):
         """
@@ -100,10 +102,11 @@ class SyncClipboard(object):
             If the clipboard content is empty, no action is taken.
         """
         clipboard_content = self.remote_gist_manager.fetch_content()
+        if len(clipboard_content) > MAX_CONTENT_LOG:
+            jest = f'{clipboard_content[:MAX_CONTENT_LOG]}...'
+        else:
+            jest = clipboard_content
+        logging.info(f'fetched clipboard content from gist: {jest}')
         if clipboard_content:
             termux_clipboard_set(clipboard_content)
-            if len(clipboard_content) > MAX_CONTENT_LOG:
-                jest = f'{clipboard_content[:MAX_CONTENT_LOG]}...'
-            else:
-                jest = clipboard_content
-            logging.info(f"set device's clipboard content: {jest}")
+        logging.info("set device's clipboard content")
