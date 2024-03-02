@@ -1,6 +1,6 @@
 import pytest
 
-from share_android_clipboard.sync import some_function
+from sync_android_clipboard.sync import some_function
 
 
 @pytest.mark.parametrize(('first', 'second', 'expected'), [
