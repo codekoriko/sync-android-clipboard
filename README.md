@@ -1,4 +1,4 @@
-# local-ip-bookkeeper
+# Sync Android Clipboard
 
 [![Build Status](https://github.com/psychonaute/local-ip-bookkeeper/workflows/test/badge.svg?branch=master&event=push)](https://github.com/psychonaute/local-ip-bookkeeper/actions?query=workflow%3Atest)
 [![codecov](https://codecov.io/gh/psychonaute/local-ip-bookkeeper/branch/master/graph/badge.svg)](https://codecov.io/gh/psychonaute/local-ip-bookkeeper)
