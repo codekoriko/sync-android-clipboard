@@ -42,7 +42,7 @@ class SyncClipboard(object):
         remote_clipboard_filename: str,
     ):
         """
-        Initializes the ShareClipboard instance.
+        Initializes the SyncClipboard instance.
 
         Args:
             device_id (str): The ID of the device using this instance.

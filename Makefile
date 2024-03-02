@@ -2,8 +2,8 @@ SHELL:=/usr/bin/env bash
 
 .PHONY: lint
 lint:
-	poetry run mypy share_android_clipboard tests/**/*.py
-	poetry run flake8 ./share_android_clipboard
+	poetry run mypy sync_android_clipboard tests/**/*.py
+	poetry run flake8 ./sync_android_clipboard
 
 .PHONY: unit
 unit:

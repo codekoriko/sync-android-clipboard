@@ -1,6 +1,6 @@
 [tool.poetry]
-name = "share-android-clipboard"
-description = "make use of sh package and termux-api termux-clipboard-get and gist-storage to share clipboard between devices"
+name = "sync-android-clipboard"
+description = "make use of sh package and termux-api termux-clipboard-get and gist-storage to sync clipboard between devices"
 version = "0.1.0"
 license = "MIT"
 
@@ -8,7 +8,7 @@ authors = []
 
 readme = "README.md"
 
-repository = "https://github.com/psychonaute/share-android-clipboard"
+repository = "https://github.com/codekoriko/sync-android-clipboard"
 
 keywords = []
 
@@ -23,7 +23,7 @@ classifiers = [
 python = "^3.11"
 sh = "^2.0.6"
 python-dotenv = "^1.0.1"
-gist-storage = {git = "https://git@github.com/psychonaute/gist-storage.git", extras = ["encryption"]}
+gist-storage = {git = "https://git@github.com/codekoriko/gist-storage.git", extras = ["encryption"]}
 
 [tool.poetry.group.test.dependencies]
 nitpick = "^0.32"

@@ -46,7 +46,7 @@ We use `mypy` to run type checks on our code.
 To use it:
 
 ```bash
-mypy share_android_clipboard tests/**/*.py
+mypy sync_android_clipboard tests/**/*.py
 ```
 
 This step is mandatory during the CI.

@@ -427,7 +427,7 @@ encryption = ["cryptography (>=42.0.2,<43.0.0)", "python-dotenv (>=1.0.1,<2.0.0)
 
 [package.source]
 type = "git"
-url = "https://git@github.com/psychonaute/gist-storage.git"
+url = "https://git@github.com/codekoriko/gist-storage.git"
 reference = "HEAD"
 resolved_reference = "7e6d998a614cb8b705195b178ed887db143754ef"
 

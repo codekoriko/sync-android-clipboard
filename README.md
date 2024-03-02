@@ -1,11 +1,11 @@
 # Sync Android Clipboard
 
-[![Build Status](https://github.com/psychonaute/local-ip-bookkeeper/workflows/test/badge.svg?branch=master&event=push)](https://github.com/psychonaute/local-ip-bookkeeper/actions?query=workflow%3Atest)
-[![codecov](https://codecov.io/gh/psychonaute/local-ip-bookkeeper/branch/master/graph/badge.svg)](https://codecov.io/gh/psychonaute/local-ip-bookkeeper)
+[![Build Status](https://github.com/codekoriko/local-ip-bookkeeper/workflows/test/badge.svg?branch=master&event=push)](https://github.com/codekoriko/local-ip-bookkeeper/actions?query=workflow%3Atest)
+[![codecov](https://codecov.io/gh/codekoriko/local-ip-bookkeeper/branch/master/graph/badge.svg)](https://codecov.io/gh/codekoriko/local-ip-bookkeeper)
 [![Python Version](https://img.shields.io/pypi/pyversions/local-ip-bookkeeper.svg)](https://pypi.org/project/local-ip-bookkeeper/)
 [![wemake-python-styleguide](https://img.shields.io/badge/style-wemake-000000.svg)](https://github.com/wemake-services/wemake-python-styleguide)
 
-Sync the clipboard content between device. It uses encryption a Gist files thanks to the [gist-storage](https://github.com/psychonaute/gist-storage) package
+Sync the clipboard content between device. It uses encryption a Gist files thanks to the [gist-storage](https://github.com/codekoriko/gist-storage) package
 
 ## Features
 
@@ -22,9 +22,9 @@ poetry add git+https://github.com/codeCoRepo/sync-android-clipboard#master
 
 ## Usage
 
-`GITHUB_GIST_TOKEN` environement variable needs to be defined with your githun token CF: [gist-storage doc](https://github.com/psychonaute/gist-storage)
+`GITHUB_GIST_TOKEN` environement variable needs to be defined with your githun token CF: [gist-storage doc](https://github.com/codekoriko/gist-storage)
 
-create a gist and copy `your-gist-hash`. Inside that gist create 2 files `my-local-clipboard` and `my-remote-clipboard`. Gist can be set to `secret` (private). Also CF: [gist-storage doc](https://github.com/psychonaute/gist-storage)
+create a gist and copy `your-gist-hash`. Inside that gist create 2 files `my-local-clipboard` and `my-remote-clipboard`. Gist can be set to `secret` (private). Also CF: [gist-storage doc](https://github.com/codekoriko/gist-storage)
 
 ```python
 from dotenv import load_dotenv, find_dotenv
@@ -43,7 +43,7 @@ sync_clip.fetch()
 
 ## License
 
-[MIT](https://github.com/psychonaute/local-ip-bookkeeper/blob/master/LICENSE)
+[MIT](https://github.com/codekoriko/local-ip-bookkeeper/blob/master/LICENSE)
 
 ## Credits
 
