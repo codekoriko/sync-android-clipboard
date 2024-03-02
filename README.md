@@ -9,6 +9,9 @@ Sync the clipboard content between device. It uses encryption a Gist files thank
 
 ## Features
 
+- Bidirectional sync of device and remote clipboard
+- Don't require to be on the same network
+- Clipboard content is saved to gist encrypted
 - Fully typed with annotations and checked with mypy, [PEP561 compatible](https://www.python.org/dev/peps/pep-0561/)
 
 ## Installation
