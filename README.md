@@ -17,7 +17,7 @@ Sync the clipboard content between device. It uses encryption a Gist files thank
 ## Installation
 
 ```bash
-poetry add git+https://github.com/codeCoRepo/sync-android-clipboard#master
+poetry add git+https://github.com/codeKoriko/sync-android-clipboard#master
 ```
 
 ## Usage
